@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+        <link rel="shortcut icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+<center>
+<h3>Colegio Stonecutters</h3> 
+<br>
+<form name="login"> 
+     <table width="200" border="0"> 
+         <tr>
+         <img src="logo.png" alt=""/>
+         <tr><td><label style="font-size: 14pt"><b>Usuario:</b></label></td>
+         <td width=80> <input name="usuario" type="text" class="Input" value="" size="20" placeholder="Ingresa tu usuario"/> </td></tr>
+         <tr><td><label style="font-size: 14pt"><b>Contraseña:</b></label></td>
+         <td> <input name="password" type="password" class="Input" value="" size="20" placeholder="Ingresa tu contraseña"/></td></tr>
+         <tr><td width="80" aling=center><input value="Entrar" target="parent" onclick="Login()" type="button" class="btn btn-primary"/></td> </tr>
+            
+         <tr><td width="80" aling=center><input type="reset" name="Borrar" id="Borrar" value="Reset" class="btn btn-primary" /></td></tr>
+         </tr>
+     </table> 
+</form> </center>
+
+<script language="JavaScript"> 
+function Login(){ 
+var done=0; 
+var usuario=document.login.usuario.value; 
+var password=document.login.password.value; 
+if (usuario=="admin" && password=="123456") { 
+window.location="menu.jsp"; 
+} 
+if (usuario=="admin2" && password=="123") { 
+window.location="menu.jsp"; 
+}else{
+
+window.location="Fail.jsp"; 
+} 
+} 
+
+        </script> 
+</center> 
+<script language="Javascript"> 
+<!-- Begin 
+document.oncontextmenu = function(){return false} 
+// End --> 
+</script>
+</body>
+</html>

@@ -33,7 +33,7 @@ background-color: #403e39 }
         <a class="nav-link" href="ingresar.jsp">Ingresar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="actualizar.jsp">Ver Datos</a>
+        <a class="nav-link" href="verdatos.jsp">Ver Datos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="eliminar.jsp">Eliminar</a>

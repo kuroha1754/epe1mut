@@ -101,14 +101,28 @@ background-color: #403e39 }
             sentencia = conexion.createStatement();
             String sql = "SELECT * FROM ASIGNATURA";
             resultados = sentencia.executeQuery(sql);
+            out.println("<table border='5' style='margin: 0 auto;'>");
+            out.println("<td rowspan = '2' ><strong>Seccion</strong></td>");
+            out.println("<td colspan = '1' ><strong>Sala</strong></td>");
+            out.println("<td rowspan = '2' ><strong>Asignatura</strong></td>");
+            out.println("<td colspan = '1' ><strong>Departamento</strong></td>");
+            out.println("<tr>");
             while(resultados.next()){
                 int seccion = resultados.getInt("seccion");
                 int sala = resultados.getInt("sala");
                 String asignatura = resultados.getString("asignatura");
                 String departamento = resultados.getString("departamento");
-                out.println("<h6>Seccion - Sala - Asignatura - Departamento  </h6>" );
-                out.println("<h6>" + seccion + " - " + sala + " - " + asignatura + " - " + departamento );
+                 out.println("<tr>");
+                    out.println("<td rowspan = '1' >" + seccion + "</td>");
+               out.println("<td colspan = '1' >" + asignatura + "</td>");
+               out.println("<td colspan = '1' >" + sala + "</td>");
+                out.println("<td colspan = '1' >" + departamento + "</td>");
+                
+                out.println("<tr>");
+             
+                
             }
+            out.println("</table>");
             sentencia.close();
             conexion.close();
         }catch(Exception e){
@@ -116,6 +130,8 @@ background-color: #403e39 }
             
         }
         %>		
+        
+        <a href="verdatos.jsp" class="btn btn-primary btn-lg btn-block">Volver</a>
             </div>
         <!-- /.row -->
 

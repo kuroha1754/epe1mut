@@ -77,7 +77,7 @@ public class CINasignatura extends HttpServlet {
 "        <a class=\"nav-link\" href=\"ingresar.jsp\">Ingresar</a>\n" +
 "      </li>\n" +
 "      <li class=\"nav-item\">\n" +
-"        <a class=\"nav-link\" href=\"ver.jsp\">Ver Datos</a>\n" +
+"        <a class=\"nav-link\" href=\"verdatos.jsp\">Ver Datos</a>\n" +
 "      </li>\n" +
 "      <li class=\"nav-item\">\n" +
 "        <a class=\"nav-link\" href=\"actualizar.jsp\">Actualizar</a>\n" +

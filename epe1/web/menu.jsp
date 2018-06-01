@@ -88,7 +88,7 @@ background-color: #403e39 }
             conexion = DriverManager.getConnection(url, usuario, password);
             out.println("<h2>Asignatura, Profesor, Estudiante");
             sentencia = conexion.createStatement();
-            String sql = "select asignatura.seccion,asignatura.asignatura,asignatura.sala,profesor.nombre as 'Profesor',estudiante.nombre as 'Estudiante' from asignatura inner join profesor on profesor.seccion=asignatura.seccion inner join estudiante on estudiante.seccion=asignatura.seccion;";
+            String sql = "select asignatura.seccion,asignatura.asignatura,asignatura.sala,profesor.nombre as 'Profesor',estudiante.nombre as 'Estudiante' from asignatura inner join profesor on profesor.seccion=asignatura.seccion inner join estudiante on estudiante.seccion=asignatura.seccion order by asignatura.seccion ASC;";
             resultados = sentencia.executeQuery(sql);
             out.println("<table border='5' style='margin: 0 auto;'>");
             out.println("<td rowspan = '2' ><strong>Seccion</strong></td>");
